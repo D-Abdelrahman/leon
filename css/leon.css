@@ -1,4 +1,10 @@
-body {
-  color: green;
-  font-weight: bold;
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+body {
+  font-family: "Work Sans", sans-serif;
+}
+/* End Global Rules */
