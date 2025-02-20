@@ -1,10 +1,129 @@
+/* Start Variables */
+* {
+  --main-padding: 10px;
+  --main-color-green: #10cabf;
+}
+/*End Variables */
 /* Start Global Rules */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 body {
   font-family: "Work Sans", sans-serif;
 }
+.container {
+  padding-left: var(--main-padding);
+  padding-right: var(--main-padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
 /* End Global Rules */
+/* Start Header */
+header {
+  padding: 10px 0;
+}
+header .container {
+  height: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img {
+  height: 25px;
+}
+header .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
+header .icon > li {
+  width: 30px;
+  height: 2px;
+  background-color: black;
+}
+header .icon > li:nth-child(2) {
+  width: 15px;
+  margin: 5px 0;
+  transition-duration: 0.5s;
+}
+header .icon:hover > li:nth-child(2) {
+  width: 30px;
+}
+header .minuo {
+  background-color: #f6f6f6;
+  width: 200px;
+  position: absolute;
+  top: 35px;
+  display: none;
+}
+header .minuo::before {
+  content: "";
+  border: 10px solid;
+  border-color: transparent transparent #eeeeee8d;
+  position: absolute;
+  top: -20px;
+  right: 5px;
+}
+header .icon:hover .minuo {
+  display: block;
+}
+header .minuo li {
+  padding: calc(var(--main-padding) + 5px);
+  transition-duration: 0.5s;
+}
+header .minuo li:hover {
+  padding-left: calc(var(--main-padding) + 15px);
+}
+header .minuo li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+header .minuo li a {
+  text-decoration: none;
+  color: #333;
+}
+/* End Header */
+/* Start Home Page */
+.home {
+  background-image: url("../imgs/home_page.jpg");
+  background-size: cover;
+  height: calc(100vh - 60px);
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.home h1 {
+  color: var(--main-color-green);
+  font-size: 50px;
+}
+p {
+  margin-top: -10px;
+  font-size: 20px;
+line-height: 1.6;
+}
+
+/* End Home Page */
